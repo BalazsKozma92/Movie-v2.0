@@ -3,11 +3,11 @@ package movies;
 public abstract class Product {
     private String id;
     private String title;
-    private Person borrower;
+    private Person reader;
     
-    public Product(String title, Person borrower) {
+    public Product(String title, Person reader) {
     	this.title = title;
-    	this.borrower = borrower;
+    	this.reader = reader;
     	this.id = IdGenerator.generate(this);
     }
 
@@ -20,7 +20,7 @@ public abstract class Product {
     }
     
     public Person getPerson() {
-        return borrower;
+        return reader;
     }
     
     public abstract long getInvestment();

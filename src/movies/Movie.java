@@ -12,8 +12,8 @@ public class Movie extends Product implements Buyable {
     private List<Person> cast;
     private int price;
     
-    public Movie(String title, Person borrower, Genre genre, long duration, double rate, List<Person> cast, int price) {
-    	super(title, borrower);
+    public Movie(String title, Person reader, Genre genre, long duration, double rate, List<Person> cast, int price) {
+    	super(title, reader);
     	this.genre = genre;
     	this.duration = duration;
     	this.rate = rate;
@@ -74,8 +74,8 @@ public class Movie extends Product implements Buyable {
     @Override
     public String toString() {
     	StringBuffer buffer = new StringBuffer();
-    	buffer.append("Movie [genre=").append(genre).append(", duration=").append(duration).append(", rate=")
-    	.append(rate).append(", price=").append(price).append(", ID=").append(getId())
+    	buffer.append("Movie genre = ").append(genre).append(", duration = ").append(duration).append(", rate = ")
+    	.append(rate).append(", price = ").append(price).append(", ID = ").append(getId())
     	.append(", title=").append(getTitle()).append("]");
     	return buffer.toString();
     }

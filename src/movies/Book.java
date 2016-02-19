@@ -3,8 +3,8 @@ package movies;
 public class Book extends Product {
     private Person author;
     
-    public Book(String title, Person borrower, Person author) {
-    	super(title, borrower);
+    public Book(String title, Person reader, Person author) {
+    	super(title, reader);
     	this.author = author;
     }
 
@@ -25,7 +25,7 @@ public class Book extends Product {
     public String toString() {
     	StringBuffer buffer = new StringBuffer();
     	buffer.append("Book [author=").append(author).append(", ID=").append(getId())
-    	.append(", title=").append(getTitle()).append(", borrower=").append(getPerson()).append("]");
+    	.append(", title=").append(getTitle()).append(", reader=").append(getPerson()).append("]");
     	return buffer.toString();
     	}
 
